@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: book-ws
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8888/auth/realms/master
+
+logging.level:
+  org.springframework.cloud.gateway: DEBUG
+  org.springframework.security: DEBUG
+  org.springframework.web.reactive.function.client: TRACE
+server:
+  servlet:
+    context-path: /books-ws
+  port: 8040
